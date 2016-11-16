@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./bundle.js"></script>
+  <!--h1>Hello World</h1>
+  <input type="file" id="holder">
+  <script>
+    const holder = document.getElementById('holder');
+
+    holder.ondragover = () => {
+      return false;
+    }
+    holder.ondragleave = holder.ondragend = () => {
+      return false;
+    }
+    holder.ondrop = (e) => {
+      e.preventDefault();
+      for (let f of e.dataTransfer.files) {
+        console.log(f.path);
+        console.log(checkPath('Desktop', f.path));
+      }
+    }
+
+    function checkPath(target, path) {
+      findFile('Desktop', 'underbar.zip');
+      return path.includes(target);
+    }
+
+    function findFile(directory, fileName) {
+      const fs = require('fs');
+      fs.readdir(`/Users/dejongill/${directory}/`, 'utf8', (err, files) => {
+        console.log(files.indexOf(fileName) > -1);
+      })
+    }
+  </script-->
+</body>
+</html>
