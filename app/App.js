@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import Search from './components/Search';
+import store from './store/makeStore';
+
+import TopNav from './containers/TopNav';
+import ContentList from './containers/ContentList';
 
 class App extends Component {
   render() {
     return <div>
-      <h1>Hello World of War Craft!</h1>
-      <Search />
+      <TopNav />
+      <ContentList />
     </div>
   }
 }
 
-render(<App />, document.getElementById('app'));
+render(<Provider store={store}>
+    <App />
+</Provider>, document.getElementById('app'));
