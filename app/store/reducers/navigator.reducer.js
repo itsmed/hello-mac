@@ -14,12 +14,12 @@ const navigateReducer = (state = {
   switch(action.type) {
   case NAVIGATE_PREVIOUS:
     return Object.assign({}, state, {
-      currentTask: --state.currentTask
+      currentTask: state.currentTask === 0 ? state.currentTask : --state.currentTask
     });
     break;
   case NAVIGATE_NEXT:
     return Object.assign({}, state, {
-      currentTask: ++state.currentTask
+      currentTask: state.currentTask === state.tasks.length - 1 ? 0 : ++state.currentTask
     })
     break;
   default:

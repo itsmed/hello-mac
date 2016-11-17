@@ -1,6 +1,10 @@
 import { connect } from 'react-redux';
 
 import Title from '../components/Title';
+import {
+  navigateNext,
+  navigatePrevious
+} from '../store/actions/navigator.actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -9,8 +13,18 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  onPreviousClick: () => {
+    dispatch(navigatePrevious())
+  },
+  onNextClick: () => {
+    dispatch(navigateNext())
+  }
+});
+
 const TopNav = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Title);
 
 export default TopNav;
