@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Title from '../components/Title';
+import Title from '../components/Title.component';
 import {
   navigateNext,
   navigatePrevious

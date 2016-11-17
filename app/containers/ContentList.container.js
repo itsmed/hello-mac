@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import TableOfContents from '../components/TableOfContents';
+import TableOfContents from '../components/TableOfContents.component';
 
 const mapStateToProps = (state) => {
   return {

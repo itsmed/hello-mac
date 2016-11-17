@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import TaskText from '../components/TaskText';
+import TaskText from '../components/TaskText.component';
 
 const mapStateToProps = (state) => ({
   currentTask: state.currentTask,

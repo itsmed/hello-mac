@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 
 import store from './store/makeStore';
 
-import TopNav from './containers/TopNav';
-import ContentList from './containers/ContentList';
-import TextContainer from './containers/TextContainer';
+import TopNav from './containers/TopNav.container';
+import ContentList from './containers/ContentList.container';
+import TextContainer from './containers/TextContainer.container';
 
 class App extends Component {
   render() {
