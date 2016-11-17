@@ -7,12 +7,14 @@ import store from './store/makeStore';
 
 import TopNav from './containers/TopNav';
 import ContentList from './containers/ContentList';
+import TextContainer from './containers/TextContainer';
 
 class App extends Component {
   render() {
     return <div>
       <TopNav />
       <ContentList />
+      <TextContainer />
     </div>
   }
 }

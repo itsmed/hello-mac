@@ -21,8 +21,3 @@ currentTask: 0,
 }
 
 export default rootReducer;
-
-
-//   ({
-//   navigateReducer
-// });
